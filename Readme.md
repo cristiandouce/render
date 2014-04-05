@@ -9,6 +9,10 @@
 
     $ component install cristiandouce/render
 
+  or...
+
+    $ npm install cristiandouce-render
+
 ## Example
 
 ```js
