@@ -1,7 +1,7 @@
 
 # render
 
-  Template render
+  Template render utility. It takes a `template` compiling function and a `locals` object as parameters and calls the first after merging current locals. It also allows setting `globals` by using `render.set`.
 
 ## Installation
 
@@ -9,9 +9,65 @@
 
     $ component install cristiandouce/render
 
+## Example
+
+```js
+  var render = require('render');
+
+  function template(locals) {
+    return '<a href="' + locals.link + '" target="_blank">\n'
+      + '<span>' + locals.title + '</span>\n'
+      + '</a>\n';
+  }
+
+  // set some static globals
+  render.set('link', 'http://github.com/cristiandouce/render');
+
+  // context `locals`
+  var locals = { title: 'cristiandouce/render' };
+
+  render(template, locals);
+  // out: <a href="http://github.com/cristiandouce/render" target="_blank"> <span>cristiandouce/render</span> </a>
+```
+
 ## API
 
+### render(template, locals)
 
+Compiles `template` with `locals` and returns `html` string of result.
+
+```js
+var render = require('render');
+var template = require('./template');
+var locals = { some: 'locals', obj: 1 };
+
+var html = render(template, locals);
+// outputs compiled html string
+```
+
+### render.dom(template, locals)
+
+Offers a DOM compiled output by hand of [component/domify](https://github.com/component/domify).
+
+```js
+var render = require('render');
+var template = require('./template');
+var locals = { some: 'locals', obj: 1 };
+
+var html = render.dom(template, locals);
+// outputs compiled DOM html
+```
+
+### render.set(name, local)
+
+Set a `static` global to be merged at every `render` or `render.dom` call.
+
+```js
+var render = require('render');
+
+render.set('_i18n', require('component-t'));
+// now `_i18n` will be passed to all template compilings using `render`
+```
 
 ## License
 
