@@ -1,0 +1,17 @@
+{
+  "name": "render",
+  "repo": "cristiandouce/render",
+  "description": "Template render utility",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/domify": "1.2.0",
+    "cristiandouce/merge-util": "0.1.0"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

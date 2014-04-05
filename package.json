@@ -1,0 +1,24 @@
+{
+  "name": "render",
+  "version": "0.0.1",
+  "description": "Template render function helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cristiandouce/render.git"
+  },
+  "keywords": [
+    "render",
+    "template",
+    "jade"
+  ],
+  "author": "Cristian Douce <cristian@gravityonmars.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cristiandouce/render/issues"
+  },
+  "homepage": "https://github.com/cristiandouce/render"
+}

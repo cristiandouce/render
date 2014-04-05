@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test example | cristiandouce-render</title>
+  <script type="text/javascript" src="build/build.js"></script>
+</head>
+<body>
+
+  <h3>Compiled HTML DOM</h3>
+  <div id="content"></div>
+  <h3>Compiled HTML text</h3>
+  <div id="text"></div>
+
+  <script type="text/javascript">
+    var render = require('render');
+    function template(locals) {
+      return '<a href="' + locals.link + '" target="_blank">\n'
+        + '<span>' + locals.title + '</span>\n'
+        + '</a>\n';
+    }
+
+    render.set('link', 'http://github.com/cristiandouce/render');
+
+    var locals = { title: 'cristiandouce/render' };
+    var compiled = render.dom(template, locals);
+    var html = render(template, locals);
+
+    document.querySelector('#content').appendChild(compiled);
+    document.querySelector('#text').innerText = html;
+  </script>
+</body>
+</html>
