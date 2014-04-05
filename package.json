@@ -1,5 +1,5 @@
 {
-  "name": "render",
+  "name": "cristiandouce-render",
   "version": "0.1.0",
   "description": "Template render utility",
   "main": "index.js",
