@@ -1,7 +1,7 @@
 
 # render
 
-  Template render utility. It takes a `template` compiling function and a `locals` object as parameters and calls the first after merging current locals. It also allows setting `globals` by using `render.set`.
+  Template render utility. It takes a `template` compiling function and a `locals` object as parameters and calls the first with the second. It also allows setting `globals` by using `render.set` which gets merged at every call.
 
 ## Installation
 
