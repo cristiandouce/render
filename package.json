@@ -1,6 +1,6 @@
 {
   "name": "cristiandouce-render",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Template render utility",
   "main": "index.js",
   "scripts": {

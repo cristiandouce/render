@@ -2,7 +2,7 @@
   "name": "render",
   "repo": "cristiandouce/render",
   "description": "Template render utility",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [],
   "dependencies": {
     "component/domify": "1.2.0",
